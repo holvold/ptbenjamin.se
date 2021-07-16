@@ -7,6 +7,7 @@
 - V0.6.0 - 13 Jul New images and removed bug where layers where weird.
  - V0.7.0 - 14 Jul Images got a smaller footprint and there is also a new page added. This update finally fixed the issue with the bio aswell.
 - V0.7.5 - 15 Jul Navbar is now sticky and got a dropdown menu aswell.
+- V1.0.0 - 16 Jul GA Release, Text updated.
 
 
 ### License
