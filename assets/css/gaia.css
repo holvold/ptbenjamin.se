@@ -2576,7 +2576,7 @@ a,
 
 .section-our-clients-freebie .nav-text,
 .section-our-clients .nav-text {
-  margin: 30px auto;
+  margin: 30px auto 5px auto;
   text-align: center;
 }
 
@@ -2784,7 +2784,7 @@ a,
     padding: 0 !important;
   }
   .section-header .parallax, .section-header .static-image {
-    height: 80vh;
+    height: 100vh;
   }
   .section-header .parallax:after, .section-header .static-image:after {
     height: 80vh;

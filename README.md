@@ -9,6 +9,7 @@
 - V0.7.5 - 15 Jul Navbar is now sticky and got a dropdown menu aswell.
 - V1.0.0 - 16 Jul GA Release, Text updated.
 - V1.0.1 - 16 Jul Minor changes in the text
+- V1.0.5 - 18 Jul Layout changes and bugfixes. Started implementing dots.
 
 
 ### License
