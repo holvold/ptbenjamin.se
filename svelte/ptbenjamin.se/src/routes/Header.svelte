@@ -1,129 +1,123 @@
 <script>
-	import { page } from '$app/stores';
-	import logo from '$lib/images/svelte-logo.svg';
-	import github from '$lib/images/github.svg';
+  import { page } from "$app/stores";
+  import logo from "$lib/images/svelte-logo.svg";
+  import github from "$lib/images/github.svg";
 </script>
 
-<header>
-	<div class="corner">
-		<a href="https://kit.svelte.dev">
-			<img src={logo} alt="SvelteKit" />
-		</a>
-	</div>
-
-	<nav>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
-		</svg>
-		<ul>
-			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
-				<a href="/">Home</a>
-			</li>
-			<li aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
-				<a href="/about">About</a>
-			</li>
-			<li aria-current={$page.url.pathname.startsWith('/sverdle') ? 'page' : undefined}>
-				<a href="/sverdle">Sverdle</a>
-			</li>
-		</ul>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
-		</svg>
-	</nav>
-
-	<div class="corner">
-		<a href="https://github.com/sveltejs/kit">
-			<img src={github} alt="GitHub" />
-		</a>
-	</div>
-</header>
+<nav id="navbar" class="navbar">
+  <div class="brand-title">Benjamin Wahlgren</div>
+  <p class="toggle-button">
+    <span class="bars" />
+    <span class="bars" />
+    <span class="bars" />
+  </p>
+  <div class="navbar-links">
+    <ul>
+      <li><a href="#" class="elems">Start</a></li>
+      <li>
+        <a href="https://www.instagram.com/ptbenjamin_/" class="elems">Bilder</a
+        >
+      </li>
+      <li><a href="#contactme" class="elems">Kontakta</a></li>
+    </ul>
+  </div>
+</nav>
 
 <style>
-	header {
-		display: flex;
-		justify-content: space-between;
-	}
+  .navbar {
+    z-index: 4;
+    display: flex;
+    position: sticky;
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    border-radius: 0;
+  }
 
-	.corner {
-		width: 3em;
-		height: 3em;
-	}
+  .brand-title {
+    font-size: 2rem;
+    margin: 0.5rem;
+  }
 
-	.corner a {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 100%;
-		height: 100%;
-	}
+  .navbar li {
+    padding: 15px;
+  }
 
-	.corner img {
-		width: 2em;
-		height: 2em;
-		object-fit: contain;
-	}
+  .navbar li a {
+    font-size: 20px;
+  }
 
-	nav {
-		display: flex;
-		justify-content: center;
-		--background: rgba(255, 255, 255, 0.7);
-	}
+  .navbar-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
 
-	svg {
-		width: 2em;
-		height: 3em;
-		display: block;
-	}
+  .navbar-links li {
+    list-style: none;
+  }
 
-	path {
-		fill: var(--background);
-	}
+  .navbar-links li p {
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    display: block;
+  }
 
-	ul {
-		position: relative;
-		padding: 0;
-		margin: 0;
-		height: 3em;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		list-style: none;
-		background: var(--background);
-		background-size: contain;
-	}
+  .navbar-links li:hover {
+    background-color: #555;
+  }
 
-	li {
-		position: relative;
-		height: 100%;
-	}
+  .toggle-button {
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+  }
 
-	li[aria-current='page']::before {
-		--size: 6px;
-		content: '';
-		width: 0;
-		height: 0;
-		position: absolute;
-		top: 0;
-		left: calc(50% - var(--size));
-		border: var(--size) solid transparent;
-		border-top: var(--size) solid var(--color-theme-1);
-	}
+  .toggle-button .bars {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+  }
 
-	nav a {
-		display: flex;
-		height: 100%;
-		align-items: center;
-		padding: 0 0.5rem;
-		color: var(--color-text);
-		font-weight: 700;
-		font-size: 0.8rem;
-		text-transform: uppercase;
-		letter-spacing: 0.1em;
-		text-decoration: none;
-		transition: color 0.2s linear;
-	}
+  @media (max-width: 600px) {
+    .toggle-button {
+      display: flex;
+    }
 
-	a:hover {
-		color: var(--color-theme-1);
-	}
+    .navbar-links {
+      display: none;
+      width: 100%;
+    }
+
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .navbar-links ul {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .navbar-links li {
+      text-align: center;
+    }
+
+    .navbar-links li p {
+      padding: 0.5rem 1rem;
+    }
+
+    .navbar-links.active {
+      display: flex;
+    }
+  }
 </style>
