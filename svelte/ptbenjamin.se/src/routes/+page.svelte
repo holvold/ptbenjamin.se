@@ -5,7 +5,12 @@
 
 <svelte:head>
   <title>Benjamin Wahlgren - Lic. PT</title>
-  <meta name="description" content="Svelte demo app" />
+  <meta name="description" content="ptbenjamin.se" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Cambo|Poppins:400,600"
+    rel="stylesheet"
+    type="text/css"
+  />
 </svelte:head>
 
 <Startpage />
