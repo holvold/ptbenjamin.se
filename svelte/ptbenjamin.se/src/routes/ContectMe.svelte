@@ -20,8 +20,15 @@
 </a>
 
 <style>
+  .title-area {
+    position: absolute;
+    color: white;
+  }
   .container {
     position: static;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-position: center;
     background-size: cover;
     height: 60vh;

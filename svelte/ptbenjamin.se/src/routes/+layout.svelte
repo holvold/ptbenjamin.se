@@ -7,88 +7,82 @@
     <slot />
   </main>
 
-  <footer class="footer footer-big footer-color-black" data-color="black">
+  <footer class="footer">
     <div class="container">
       <div class="row">
-        <div class="col-md-2 col-sm-3">
+        <div class="col1">
           <div class="info">
             <h5 class="title">Smart Hälsa</h5>
-            <nav>
-              <ul>
-                <li>
-                  <p>Skälbyvägen 12 (Mörbyområdet)</p>
-                </li>
-                <li>
-                  <p>155 35 Nykvarn</p>
-                </li>
-                <li>
-                  <p>TRAIN@SMARTHALSANYKVARN.SE</p>
-                </li>
-              </ul>
-            </nav>
+            <ul>
+              <li>
+                <p>Skälbyvägen 12 (Mörbyområdet)</p>
+              </li>
+              <li>
+                <p>155 35 Nykvarn</p>
+              </li>
+              <li>
+                <p>TRAIN@SMARTHALSANYKVARN.SE</p>
+              </li>
+            </ul>
           </div>
         </div>
-        <div class="col-md-3 col-md-offset-1 col-sm-3">
+        <div class="col2">
           <div class="info">
             <h5 class="title">Help and Support</h5>
-            <nav>
-              <ul>
-                <li>
-                  <a href="#contactme">Kontakta</a>
-                </li>
-                <li>
-                  <a href="https://www.instagram.com/ptbenjamin_/">Bilder</a>
-                </li>
-              </ul>
-            </nav>
+            <ul>
+              <li>
+                <a href="#contactme">Kontakta</a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/ptbenjamin_/">Bilder</a>
+              </li>
+            </ul>
           </div>
         </div>
-        <div class="col-md-3 col-md-offset-1 col-sm-3">
+        <div class="col3">
           <div class="info">
             <h5 class="title">Följ mig på</h5>
-            <nav>
-              <ul>
-                <li>
-                  <a
-                    href="https://www.instagram.com/ptbenjamin_/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="btn btn-social btn-intagram btn-simple"
-                  >
-                    <i class="fa fa-instagram" /> @ptbenjamin_
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.instagram.com/nykvarn_smart_club/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="btn btn-social btn-instagram btn-simple"
-                  >
-                    <i class="fa fa-instagram" /> @nykvarn_smart_club
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.smartlifestyle.se/"
-                    target="_blank"
-                    class="btn btn-social btn-twitter btn-simple"
-                  >
-                    <i class="fa fa-globe" /> smartlifestyle.se
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="http://www.nykvarnsif.se/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="btn btn-social btn-reddit btn-simple"
-                  >
-                    <i class="fa fa-globe" /> nykvarnsif.se
-                  </a>
-                </li>
-              </ul>
-            </nav>
+            <ul>
+              <li>
+                <a
+                  href="https://www.instagram.com/ptbenjamin_/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="follow-me-link"
+                >
+                  <i class="fa fa-instagram" /> @ptbenjamin_
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/nykvarn_smart_club/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="follow-me-link"
+                >
+                  <i class="fa fa-instagram" /> @nykvarn_smart_club
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.smartlifestyle.se/"
+                  target="_blank"
+                  class="follow-me-link"
+                >
+                  <i class="fa fa-globe" /> smartlifestyle.se
+                </a>
+              </li>
+              <li>
+                <a
+                  href="http://www.nykvarnsif.se/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="follow-me-link"
+                >
+                  <i class="fa fa-globe" /> nykvarnsif.se
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -107,32 +101,75 @@
     min-height: 100vh;
   }
 
-  main {
-    /* flex: 1;
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    width: 100%;
-    max-width: 64rem;
-    margin: 0 auto;
-    box-sizing: border-box; */
-  }
-
-  footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 12px;
-  }
-
-  footer a {
+  /* create 3 classes col1, col2, col3 where each column take upp 33% of the footer */
+  .col1,
+  .col2 {
+    width: 25%;
+    font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px;
     font-weight: bold;
   }
 
-  @media (min-width: 480px) {
-    footer {
-      padding: 12px 0;
-    }
+  .col3 {
+    width: 50%;
+  }
+
+  .follow-me-link {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .follow-me-link:hover {
+    color: #777777;
+  }
+
+  .footer {
+    background-color: #1e1e1ef7;
+    color: #777777;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  ul a {
+    color: #777777;
+    text-decoration: none;
+    opacity: 0.7;
+  }
+
+  ul a:hover {
+    opacity: 1;
+  }
+
+  .title {
+    color: #fff;
+    opacity: 0.7;
+  }
+
+  .container {
+    margin: 0 300px 0 300px;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  hr {
+    margin-top: 50px;
+    border: 0px;
+    height: 1px;
+    background-color: #444444;
+  }
+
+  .copyright {
+    text-align: center;
+    color: #777777;
+    opacity: 0.7;
+    font-size: 0.8rem;
+    margin: 20px;
   }
 </style>
