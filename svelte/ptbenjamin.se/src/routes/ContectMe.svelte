@@ -5,7 +5,7 @@
 <a id="contactme">
   <div class="container" style="background-image: url({BenjiHugge})">
     <div class="title-area content">
-      <h2 class="text-white">Kontakta mig!</h2>
+      <h2>Kontakta mig!</h2>
       <div class="separator line-separator">♦</div>
       <p class="description3">
         Är du intresserad av att veta mer kontakta mig då via mail, telefon
@@ -13,8 +13,8 @@
       </p>
       <p><i class="fa fa-envelope" /> benjamin.wahlgren76@gmail.com</p>
       <p><i class="fa fa-mobile" /> +46 70 660 21 68</p>
-      <p><i class="fa fa-instagram" /> @ptbenjamin_</p>
-      <p><i class="fa fa-facebook" /> Benjamin Wahlgren</p>
+      <p><i class="fab fa-instagram" /> @ptbenjamin_</p>
+      <p><i class="fab fa-facebook-f" /> Benjamin Wahlgren</p>
     </div>
   </div>
 </a>
@@ -23,6 +23,10 @@
   .title-area {
     position: absolute;
     color: white;
+  }
+
+  h2 {
+    font-family: "Cambo", "Times New Roman", serif;
   }
   .container {
     position: static;
