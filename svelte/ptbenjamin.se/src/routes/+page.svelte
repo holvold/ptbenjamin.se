@@ -1,6 +1,7 @@
 <script>
   import Startpage from "./Startpage.svelte";
   import ContectMe from "./ContectMe.svelte";
+  import Form from "./Form.svelte";
 </script>
 
 <svelte:head>
@@ -14,6 +15,7 @@
 </svelte:head>
 
 <Startpage />
+<Form />
 <ContectMe />
 
 <style>

@@ -12,9 +12,23 @@
         eller sociala medier
       </p>
       <p><i class="fa fa-envelope" /> benjamin.wahlgren76@gmail.com</p>
-      <p><i class="fa fa-mobile" /> +46 70 660 21 68</p>
-      <p><i class="fab fa-instagram" /> @ptbenjamin_</p>
-      <p><i class="fab fa-facebook-f" /> Benjamin Wahlgren</p>
+      <p><i class="fa-solid fa-phone" /> +46 70 660 21 68</p>
+      <a
+        href="https://www.instagram.com/ptbenjamin_/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="follow-me-link"
+      >
+        <i class="fab fa-instagram" /> @ptbenjamin_
+      </a>
+      <a
+        href="https://www.facebook.com/benjamin.wahlgren.9"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="follow-me-link"
+      >
+        <i class="fab fa-facebook-f" /> Benjamin Wahlgren
+      </a>
     </div>
   </div>
 </a>
